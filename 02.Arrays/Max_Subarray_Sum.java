@@ -9,9 +9,9 @@ public class Max_Subarray_Sum {
             for(int j=i;j<n;j++){
                 int currSum=0;
                 for(int k=i;k<=j;k++){
-                    currSum=currSum+arr[k];
+                    currSum=currSum+arr[k];//storing sum of values at index i until index k in currSum
                 }
-                max=Math.max(max,currSum);
+                max=Math.max(max,currSum);//using Math.max to find the biggest number in max and currSum and storing it in max
             }
         }
 
@@ -28,13 +28,13 @@ public class Max_Subarray_Sum {
         prefix[0] = arr[0];
 
         for(int i = 1; i < prefix.length; i++){
-            prefix[i] = prefix[i-1] + arr[i];
+            prefix[i] = prefix[i-1] + arr[i];//Creating a prefix array to store sum of values from start until index i
         }
 
         for(int i = 0; i < n; i++){
             for(int j = i; j < n; j++){
-                currSum = i==0 ? prefix[j] : prefix[j] - prefix[i-1];
-                maxSum = Math.max(currSum,maxSum);
+                currSum = i==0 ? prefix[j] : prefix[j] - prefix[i-1]; 
+                maxSum = Math.max(currSum,maxSum);//Storing the largest value in maxSum
             }
         }
 

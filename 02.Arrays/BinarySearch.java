@@ -1,4 +1,5 @@
 public class BinarySearch {
+    //function to to search a element using Binary Search - 0(log n) Time Complexity
     public static int Search(int arr[],int key){
         int si=0;
         int ei=arr.length-1;
@@ -23,7 +24,7 @@ public class BinarySearch {
         int key = 4;
         int idx = Search(arr,key);
         
-        if(idx == -1){
+        if(idx == -1){//if key not found
             System.out.println("Key not found ");
         }
         else{

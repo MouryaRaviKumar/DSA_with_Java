@@ -6,20 +6,20 @@ public class Shortest_path {
 
         for(int i=0;i<str.length();i++){
             if(str.charAt(i)=='N'){
-                y++;
+                y++;//To upward direction
             }
             else if(str.charAt(i)=='S'){
-                y--;
+                y--;//To downward direction
             }else if(str.charAt(i)=='W'){
-                x--;
+                x--;//To left direction
             }
             else {
-                x++;
+                x++;//To right direction
             }
         }
         int x2=x*x;
         int y2=y*y;
-        return (float) Math.sqrt(x2+y2);
+        return (float) Math.sqrt(x2+y2);//formula for displacement
     }
     
     public static void main(String args[]){

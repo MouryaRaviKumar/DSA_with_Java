@@ -1,4 +1,5 @@
 public class ReverseArray {
+    //Function to reverse an array with using additional array -- 0(log n) Time complexity
     public static void reverse(int arr[]){
         int si=0;
         int ei=arr.length-1;
@@ -23,7 +24,7 @@ public class ReverseArray {
         }
 
         System.out.println();
-        reverse(arr);
+        reverse(arr);//Function calling
     }
     
 }

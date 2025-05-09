@@ -9,7 +9,7 @@ public class Spiral_Matrix{
         int endcol=m-1;
 
         while(startcol<=endcol && startrow<=endrow){
-            for(int j=startcol;j<=endcol;j++){  //Top row
+            for(int j=startcol;j<=endcol;j++){  //Top row 
                 System.out.print(arr[startrow][j]+" ");
             }
             for(int i=startrow+1;i<=endrow;i++){ //Right column

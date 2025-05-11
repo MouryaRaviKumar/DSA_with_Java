@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Pair_Sum_2 {
+    //function to find pairSum with o(N) -time complexity using Two pointer Approach
     public static boolean PairSum2 (ArrayList <Integer> List,int target){
         int bp = -1;
         int n = List.size();

@@ -18,6 +18,7 @@ public class Quick_Sort_Program {
                 arr[i] = temp;
             }
         }
+        //To Place the Pivot in Position
         i++;
         int temp = pivot;
         arr[ei] = arr[i];

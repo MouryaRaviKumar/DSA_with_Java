@@ -37,6 +37,7 @@ public class Size_of_LinkedList {
         tail.next = newNode;
         tail = newNode;
     }
+    //Function to Add node in Middle
     public void addMiddle(int index,int data){
         if(index == 0){
             addFirst(data);

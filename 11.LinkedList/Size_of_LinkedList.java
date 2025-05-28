@@ -10,7 +10,7 @@ public class Size_of_LinkedList {
 
     public static Node head;
     public static Node tail;
-    public static int size;
+    public int size;
     
     
 

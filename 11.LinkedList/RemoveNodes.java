@@ -1,5 +1,4 @@
-//This File Contains Creation of LinkedList ,Adding of Nodes at First,Adding of Nodes at Last and Printing of the LinkedList
-public class Initialization {
+public class RemoveNodes {
     public static class Node{
         int data;
         Node next;
@@ -11,6 +10,7 @@ public class Initialization {
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     //Function to print the LinkedList
     public  void traveseList(){
@@ -29,6 +29,7 @@ public class Initialization {
     //To add Nodes at front of the LinkedList
     public void addFirst(int data){
         Node newNode = new Node(data);
+        size++;
         if(head == null){
             head = tail = newNode;
             return;
@@ -40,6 +41,7 @@ public class Initialization {
     //To add Nodes at last of the LinkedList
     public void AddLast(int data){
         Node newNode = new Node(data);
+        size++;
         if(head == null){
             head = tail = newNode;
             return;
@@ -54,6 +56,7 @@ public class Initialization {
             return;
         }
         Node newNode = new Node(data);
+        size++;
         Node temp = head;
         int i = 0;
         while(i<index-1){
@@ -63,17 +66,52 @@ public class Initialization {
         newNode.next = temp.next;
         temp.next = newNode;
     }
+    public int RemoveFirst(){
+        if(size == 0){
+            System.out.println("LinkedLIst is empty");
+            return Integer.MIN_VALUE;
+        }else if(size == 1){
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
+    public int RemoveLast(){
+        if(size == 0){
+            System.out.println("LInkedList is empty");
+            return Integer.MIN_VALUE;
+        }else if(size == 1){
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+        Node prev = head;
+        for(int i = 0;i<size-2;i++){
+            prev = prev.next;
+        }
+        int val = prev.next.data;
+        prev.next = null;
+        tail = prev;
+        size--;
+        return val;
+    }
 
     public static void main(String args[]){
-        Initialization ll = new Initialization();
-        ll.traveseList();
+        RemoveNodes ll = new RemoveNodes();
         ll.addFirst(2);
-        ll.traveseList();
         ll.addFirst(1);
-        ll.traveseList();
         ll.AddLast(3);
-        ll.traveseList();
         ll.AddLast(4);
+        ll.traveseList();
+        ll.RemoveFirst();
+        ll.traveseList();
+        ll.RemoveLast();
         ll.traveseList();
     }
 }

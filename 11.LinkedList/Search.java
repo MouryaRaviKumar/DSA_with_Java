@@ -54,6 +54,8 @@ public class Search{
         newNode.next = temp.next;
         temp.next = newNode;
     }
+    
+    //Function to Search a value in LinkedLList using Iterative method
     public int iterative(int key){
         Node temp = head;
         for(int i = 0;i<size;i++){
@@ -65,6 +67,7 @@ public class Search{
         return -1;
     }
     
+    //Function  to Search value in Linkedlist using recursive method
     public int searchKey(Node head, int key,int i){
         if(i > size-1){
             return -1;

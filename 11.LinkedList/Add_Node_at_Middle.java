@@ -12,6 +12,7 @@ public class Add_Node_at_Middle {
     public static Node  head;
     public static Node tail;
 
+    //Function to add Node in middle of LinkedList
     public void addMiddle(int index,int data){
         Node newNode = new Node(data);
         Node temp = head;
@@ -24,6 +25,7 @@ public class Add_Node_at_Middle {
         temp.next = newNode;
     }
 
+    //Function to Add node at last of  LinkedList
     public void AddLast(int data){
         Node newNode = new Node(data);
         if(head == null){
@@ -34,6 +36,7 @@ public class Add_Node_at_Middle {
         tail = newNode;
     }
 
+    //function to print LinkedList
     public  void print(){
         if(head == null){
             System.out.println("LinkedList is Empty");

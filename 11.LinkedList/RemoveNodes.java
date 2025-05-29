@@ -49,6 +49,7 @@ public class RemoveNodes {
         tail.next = newNode;
         tail = newNode;
     }
+
     //Function to Add node in Middle
     public void addMiddle(int index,int data){
         if(index == 0){
@@ -66,6 +67,8 @@ public class RemoveNodes {
         newNode.next = temp.next;
         temp.next = newNode;
     }
+
+    //Function to remove node at first of LinkedList
     public int RemoveFirst(){
         if(size == 0){
             System.out.println("LinkedLIst is empty");
@@ -77,10 +80,12 @@ public class RemoveNodes {
             return val;
         }
         int val = head.data;
-        head = head.next;
+        head = head.next;//Assign head to the next Node and java Garbage collector deletes the first Node;
         size--;
         return val;
     }
+    
+    //Function to remove Node from last of linkedlist
     public int RemoveLast(){
         if(size == 0){
             System.out.println("LInkedList is empty");

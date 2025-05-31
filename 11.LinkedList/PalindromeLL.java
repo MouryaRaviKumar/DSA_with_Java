@@ -55,7 +55,7 @@ public class PalindromeLL {
         Node prev = null;
         Node curr = head;
         Node follow;
-        while(curr!=null){
+        while(curr!=null || curr.next!=null){
             follow = curr.next;
             curr.next = prev;
             prev = curr;

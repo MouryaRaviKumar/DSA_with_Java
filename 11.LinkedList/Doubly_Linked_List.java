@@ -9,9 +9,9 @@ public class Doubly_Linked_List {
             this.prev = null;
         }
     }
-    public static Node head;
-    public static Node tail;
-    public static int size;
+    public Node head;
+    public Node tail;
+    public int size;
 
     //Function to add a Node at first of Double LinkedList
     public void addFirst(int data){
@@ -51,7 +51,6 @@ public class Doubly_Linked_List {
             return;
         }
         head = head.next;
-        head.prev.next = null;
         head.prev = null;
         size--;
     }
@@ -67,7 +66,6 @@ public class Doubly_Linked_List {
             size--;
         }
         tail = tail.prev;
-        tail.next.prev = null;
         tail.next = null;
         size--;
     }
@@ -78,7 +76,7 @@ public class Doubly_Linked_List {
         if(head != null){
             
             while(temp != null){
-                System.out.print(+temp.data+"<->");
+                System.out.print(temp.data+"<->");
                 temp = temp.next;
             }
             System.out.println("Null");

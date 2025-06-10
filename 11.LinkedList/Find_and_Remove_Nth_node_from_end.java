@@ -39,7 +39,7 @@ public class Find_and_Remove_Nth_node_from_end{
             return;
         }
         Node prev = head;
-        int index = size - n+1;
+        int index = size-n+1;
         for(int i = 0;i<index-2;i++){
             prev = prev.next;
         }

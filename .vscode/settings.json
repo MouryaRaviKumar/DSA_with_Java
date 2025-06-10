@@ -1,0 +1,19 @@
+{
+    "java.project.sourcePaths": [
+        "12.Stacks/Stacks_using_LinkedList",
+        "12.Stacks/Stacks_using_ArrayList",
+        "12.Stacks",
+        "11.LinkedList",
+        "10.ArrayList",
+        "09.BackTracking",
+        "08.Divide and Conquer",
+        "07.Recursion Basics",
+        "06.Bit Manipulation",
+        "05.Strings",
+        "04. 2D Arrays",
+        "03.Basic Sorting Algorithms",
+        "02.Arrays",
+        "01.Patterns",
+        "13.Queues"
+    ]
+}
